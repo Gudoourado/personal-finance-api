@@ -1,0 +1,64 @@
+# Personal Finance API
+
+API REST para controle de finanças pessoais desenvolvida com **Java 17** e **Spring Boot 3.2**.
+
+## Tecnologias
+
+- Java 17
+- Spring Boot 3.2.4
+- Spring Data JPA / Hibernate
+- PostgreSQL / H2 (desenvolvimento)
+- Bean Validation
+- Maven
+
+## Como Executar
+
+```bash
+git clone https://github.com/seu-usuario/finance-api.git
+cd finance-api
+./mvnw spring-boot:run
+# API em http://localhost:8082
+# Console H2: http://localhost:8082/h2-console
+```
+
+## Endpoints
+
+### Categorias
+| Método | Endpoint               | Descrição               |
+|--------|------------------------|-------------------------|
+| GET    | /api/categories        | Listar categorias       |
+| GET    | /api/categories/{id}   | Buscar por ID           |
+| POST   | /api/categories        | Criar categoria         |
+| PUT    | /api/categories/{id}   | Atualizar categoria     |
+| DELETE | /api/categories/{id}   | Deletar categoria       |
+
+### Transações
+| Método | Endpoint                              | Descrição                    |
+|--------|---------------------------------------|------------------------------|
+| GET    | /api/transactions                     | Listar transações            |
+| GET    | /api/transactions/{id}                | Buscar por ID                |
+| POST   | /api/transactions                     | Criar transação              |
+| PUT    | /api/transactions/{id}                | Atualizar transação          |
+| DELETE | /api/transactions/{id}                | Deletar transação            |
+| GET    | /api/transactions/type/{type}         | Filtrar por tipo             |
+| GET    | /api/transactions/category/{id}       | Filtrar por categoria        |
+| GET    | /api/transactions/date-range          | Filtrar por período          |
+| GET    | /api/transactions/search?keyword=     | Buscar por palavra-chave     |
+| GET    | /api/transactions/summary             | Resumo financeiro            |
+
+## Exemplo de Request
+
+```json
+{
+  "description": "Salário mensal",
+  "amount": 3500.00,
+  "type": "RECEITA",
+  "date": "2025-03-01",
+  "categoryId": 1,
+  "notes": "Pagamento referente a março"
+}
+```
+
+## Autor
+
+**Gustavo Dourado** - Desenvolvedor Backend Jr
