@@ -14,9 +14,9 @@ API REST para controle de finanças pessoais desenvolvida com **Java 17** e **Sp
 ## Como Executar
 
 ```bash
-git clone https://github.com/seu-usuario/finance-api.git
-cd finance-api
-./mvnw spring-boot:run
+git clone https://github.com/Gudoourado/personal-finance-api.git
+cd personal-finance-api/finance-api
+mvn spring-boot:run
 # API em http://localhost:8082
 # Console H2: http://localhost:8082/h2-console
 ```
