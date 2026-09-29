@@ -19,6 +19,8 @@
 
     <properties>
         <java.version>17</java.version>
+        <!-- Byte Buddy (usado pelo Mockito nos testes) mais novo que o do Spring Boot 3.2, para os testes rodarem também em Java 23 ou mais recente -->
+        <byte-buddy.version>1.18.14</byte-buddy.version>
     </properties>
 
     <dependencies>

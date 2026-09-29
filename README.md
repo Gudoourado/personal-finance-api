@@ -41,6 +41,14 @@ mvn spring-boot:run
 
 Usuário e senha vêm das variáveis `DB_USERNAME` e `DB_PASSWORD` (padrão: `postgres` / `postgres`).
 
+## Testes
+
+```bash
+mvn test
+```
+
+Testes da camada web (`@WebMvcTest`, com o serviço simulado) que conferem o status HTTP e a mensagem de cada tipo de erro: JSON mal formado, parâmetro inválido ou ausente, método e content-type errados, endereço inexistente, validação e erro inesperado sem expor detalhe interno.
+
 ## Endpoints
 
 ### Categorias
