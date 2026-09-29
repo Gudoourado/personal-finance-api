@@ -1,5 +1,7 @@
 # Personal Finance API
 
+[![CI](https://github.com/Gudoourado/personal-finance-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Gudoourado/personal-finance-api/actions/workflows/ci.yml)
+
 API REST para controle de finanças pessoais desenvolvida com **Java 17** e **Spring Boot 3.2**.
 
 ## Tecnologias
