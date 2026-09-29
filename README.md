@@ -7,19 +7,39 @@ API REST para controle de finanças pessoais desenvolvida com **Java 17** e **Sp
 - Java 17
 - Spring Boot 3.2.4
 - Spring Data JPA / Hibernate
-- PostgreSQL / H2 (desenvolvimento)
+- PostgreSQL (H2 em memória no perfil `dev`)
 - Bean Validation
 - Maven
 
 ## Como Executar
 
+Pré-requisitos: Java 17 ou mais recente e Maven.
+
 ```bash
 git clone https://github.com/Gudoourado/personal-finance-api.git
 cd personal-finance-api/finance-api
-mvn spring-boot:run
-# API em http://localhost:8082
-# Console H2: http://localhost:8082/h2-console
 ```
+
+### Rápido, sem instalar banco (perfil `dev`)
+
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
+```
+
+Usa um banco H2 em memória: sobe em segundos e os dados somem quando a aplicação para.
+
+- API: http://localhost:8082
+- Console do H2: http://localhost:8082/h2-console (JDBC URL `jdbc:h2:mem:financedb`, usuário `sa`, sem senha)
+
+### Com PostgreSQL
+
+Crie o banco `financedb` e rode:
+
+```bash
+mvn spring-boot:run
+```
+
+Usuário e senha vêm das variáveis `DB_USERNAME` e `DB_PASSWORD` (padrão: `postgres` / `postgres`).
 
 ## Endpoints
 
